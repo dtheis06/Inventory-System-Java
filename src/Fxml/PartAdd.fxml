@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.PartAddController">
+   <children>
+      <Label fx:id="addPartLabel" layoutX="34.0" layoutY="40.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" layoutX="40.0" layoutY="100.0" text="ID" />
+      <Label fx:id="nameLabel" layoutX="40.0" layoutY="130.0" text="Name" />
+      <Label fx:id="invLabel" layoutX="40.0" layoutY="160.0" text="Inv" />
+      <Label fx:id="priceLabel" layoutX="40.0" layoutY="190.0" text="Price" />
+      <Label fx:id="maxLabel" layoutX="40.0" layoutY="220.0" text="Max" />
+      <Label fx:id="minLabel" layoutX="240.0" layoutY="220.0" text="Min" />
+      <TextField fx:id="idTextBox" disable="true" layoutX="119.0" layoutY="96.0" prefHeight="25.0" prefWidth="99.0" promptText="Auto Gen-Disabled">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nameTextBox" layoutX="119.0" layoutY="126.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="invTextBox" layoutX="119.0" layoutY="156.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="priceTextBox" layoutX="119.0" layoutY="186.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="maxTextBox" layoutX="119.0" layoutY="216.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="machineIdTextBox" layoutX="119.0" layoutY="246.0" prefHeight="25.0" prefWidth="99.0" />
+      <TextField fx:id="minTextBox" layoutX="270.0" layoutY="216.0" prefHeight="25.0" prefWidth="99.0" />
+      <Button fx:id="saveButton" layoutX="214.0" layoutY="303.0" mnemonicParsing="false" onAction="#setSaveButton" text="Save" />
+      <Button fx:id="cancelButton" layoutX="270.0" layoutY="303.0" mnemonicParsing="false" onAction="#setCancelButton" text="Cancel" />
+      <RadioButton fx:id="inHouseRadio" layoutX="109.0" layoutY="40.0" mnemonicParsing="false" onAction="#inHouseRadioListener" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="PartToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="outSourcedRadio" layoutX="209.0" layoutY="40.0" mnemonicParsing="false" onAction="#outSourcedRadioListener" text="Outsourced" toggleGroup="$PartToggleGroup" />
+      <Label fx:id="idOrCompanyLabel" layoutX="41.0" layoutY="249.0" text="Machine ID" />
+      <Label fx:id="errorMessage2" layoutX="38.0" layoutY="345.0" textFill="RED" />
+      <Label fx:id="errorMessage1" layoutX="38.0" layoutY="379.0" textFill="RED" />
+      <Label fx:id="successMessage" layoutX="140.0" layoutY="279.0" textFill="#13bf06">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="errorMessage3" layoutX="39.0" layoutY="345.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
